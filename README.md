@@ -27,7 +27,7 @@ After installing:
 
 This will start the program and a sidebar will appear on the right. From there, you can click the Instructions/About button to see more information on how to use it.
 
-A table that's ready to have a Table of Contents generated from it will look like this:
+A table that's ready to have a Table of Contents generated from it will follow this format:
 
 ![tableexample](https://user-images.githubusercontent.com/6147299/49590311-330cf100-f931-11e8-817c-e83173ba6a6f.JPG)
 
