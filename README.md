@@ -23,9 +23,9 @@ You can rename the function to something prettier like "Table of Contents Genera
 After installing:
 - Open Tools dropdown from the Google Sheet toobar
 - Hover Macros
-- Click NOKORIWARETableOfContentsGenerator
+- Click NOKORIWARETableOfContentsGenerator (or whatever you changed the name to)
 
-This will start the program.
+This will start the program and a sidebar will appear on the right. From there, you can click the Instructions/About button to see more information on how to use it.
 
 ## Soapbox ##
 I apologize that this is a bit of an inconvienence to install. Normally I'd try and make the process easier and faster, but this was a bit of a doozy. 
