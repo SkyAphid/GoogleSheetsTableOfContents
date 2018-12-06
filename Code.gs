@@ -1,6 +1,6 @@
 /*
 *
-* NOKORI·WARE Table of Contents Generator for Google Sheets
+* NOKORIÂ·WARE Table of Contents Generator for Google Sheets
 * December 2018
 *
 * This add-on will help work around the current lack of a proper Table of Contents system in Google Sheets.
@@ -163,7 +163,7 @@ function showInstructions() {
               + "\nOnce you've set up your TOC cells, use this sidebar to select the sheet to generate the Table of Contents for."
               + "\nClick the generate button to begin. If you modify sheets while the sidebar is open, click the refresh button to update the dropdown."
               + "\nAfter a Table of Contents is generated, the Quick Select drop-down can be used to quickly cycle through sections and jump to them."
-              + "\n\nTable of Contents Generator for Google Sheets | NOKORI·WARE, 2018");
+              + "\n\nTable of Contents Generator for Google Sheets | NOKORIÂ·WARE, 2018, https://www.nokoriware.com/");
 }
 
 /*
