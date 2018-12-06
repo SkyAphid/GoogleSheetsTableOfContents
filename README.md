@@ -15,6 +15,8 @@ Google Sheets doesn't have a built in Table of Contents generator like Google Do
 - Find "NOKORIWARETableOfContentsGenerator"
 - Click "ADD FUNCTION" to its lower right
 
+You can rename the function to something prettier like "Table of Contents" by using the Manage Macros button.
+
 ## Using It ##
 After installing:
 - Open Tools dropdown from the Google Sheet toobar
