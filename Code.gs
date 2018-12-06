@@ -158,11 +158,11 @@ function quickSelect(sourceSheetIndex, sectionIndex) {
 function showInstructions() {
   showMessage("Table of Contents Generator Instructions & About", 
               "How to use:"
-              + "\nColumn A will be used to designate sections of the Table of Contents."
-              + "\nCell A1 designates the name of the Table of Contents sheet. It will be generated automatically if necessary or overwritten if already available."
-              + "\nOnce you've set up your TOC cells, use this sidebar to select the sheet to generate the Table of Contents for."
-              + "\nClick the generate button to begin. If you modify sheets while the sidebar is open, click the refresh button to update the dropdown."
-              + "\nAfter a Table of Contents is generated, the Quick Select drop-down can be used to quickly cycle through sections and jump to them."
+              + "\n• Column A will be used to designate sections of the Table of Contents."
+              + "\n• Cell A1 designates the name of the Table of Contents sheet. It will be generated automatically if necessary or overwritten if already available."
+              + "\n• Once you've set up your TOC cells, use this sidebar to select the sheet to generate the Table of Contents for."
+              + "\n• Click the generate button to begin. If you modify sheets while the sidebar is open, click the refresh button to update the dropdown."
+              + "\n• After a Table of Contents is generated, the Quick Select drop-down can be used to quickly cycle through sections and jump to them."
               + "\n\nTable of Contents Generator for Google Sheets | NOKORI·WARE, 2018, https://www.nokoriware.com/");
 }
 
