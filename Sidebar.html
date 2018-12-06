@@ -1,0 +1,90 @@
+<!--Begin HTML-->
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<div style="padding: 5px;">
+  <form id="inputForm">
+  
+    <div class="block form-group">
+      <label for="sourceSheet"><b>Select Sheet</b></label>
+      <select id="sourceSheet" title="Select the base sheet. Non-empty cells in column A will be used to designate sections." onchange="refreshQuickSelect();"></select>
+    </div>
+    
+    <div class="block form-group">
+      <label for="tocQuickSelect"><b>Table of Contents Quick Select</b></label>
+      <select id="tocQuickSelect" title="If the Table of Contents for this sheet has already been generated, use this drop-down to quickly access its sections." onclick="quickSelect();"></select>
+    </div>
+    
+    <div class="block form-group">
+      <button type="submit" class="action" id="generateButton">Generate Table of Contents</button>
+    </div>
+   
+  </form>
+  
+  <br>
+  <button class="action" id="refresh" title="Press this to refresh this sidebar if any changes are made to the various sheets or new ones are generated." onclick="google.script.run.main()">Refresh</button>
+  
+  <br><br><br><br>
+  <button class="action" id="intructions" onclick="google.script.run.showInstructions()">Instructions/About</button>
+</div>
+<!--End HTML-->
+
+<!--Begin Scripting-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script>
+/*
+* This function is called when the document is initialized
+*/ 
+$(document).ready(function() {
+
+  //add the available sheets to the Source Sheet dropdown
+  google.script.run
+    .withSuccessHandler(function(sourceSheet) {
+    
+      //Fill the source sheet drop-down
+      $.each(sourceSheet, function(key, val) {
+        $('#sourceSheet').append('<option value="' + key + '">' + val + '</option>');
+      });
+      
+      //Fill quick-select after the sheet drop-down is filled
+      refreshQuickSelect();
+    
+    })
+  .getSheets();
+    
+  //This function is called when the generate button is pressed
+  $('form').submit(function() {
+    var sourceSheetIndex = $('#sourceSheet').val();
+    
+    google.script.run.generateTableOfContents(sourceSheetIndex);
+      
+    return false; //prevent the default form submit
+  });
+});
+
+/*
+* Fill quick-select after the sheet drop-down is filled
+*/
+function refreshQuickSelect() {
+  //console.log("Refresh Quick Select");
+
+  google.script.run.withSuccessHandler(function(tocQuickSelect) {
+    $('#tocQuickSelect').empty();
+    $.each(tocQuickSelect, function(key, val) {
+	$('#tocQuickSelect').append('<option value="' + key + '">' + val + '</option>');
+	  });
+  }).getTableOfContentsSectionNames($('#sourceSheet').val());
+}
+
+/*
+* Called when an entry in the quick select dropdown is selected
+*/
+function quickSelect() {
+  var sourceSheetIndex = $('#sourceSheet').val();
+  var sectionIndex = $('#tocQuickSelect').val();
+  google.script.run.quickSelect(sourceSheetIndex, sectionIndex);
+}
+</script>
+<!--End Scripting-->
