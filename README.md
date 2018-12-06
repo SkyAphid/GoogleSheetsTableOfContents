@@ -27,6 +27,12 @@ After installing:
 
 This will start the program and a sidebar will appear on the right. From there, you can click the Instructions/About button to see more information on how to use it.
 
+A table that's ready to have a Table of Contents generated from it will look like this:
+
+![tableexample](https://user-images.githubusercontent.com/6147299/49590311-330cf100-f931-11e8-817c-e83173ba6a6f.JPG)
+
+The table of contents sections are in the A column. Empty cells are ignored. Non-empty cells are added to the Table of Contents by the generator.
+
 ## Soapbox ##
 I apologize that this is a bit of an inconvienence to install. Normally I'd try and make the process easier and faster, but this was a bit of a doozy. 
 
