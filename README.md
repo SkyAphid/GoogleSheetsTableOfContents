@@ -8,7 +8,7 @@ Google Sheets doesn't have a built in Table of Contents generator like Google Do
 
 ## Features ##
 - Table of Contents Generator
-- Outline functionality that allows you to jump to sections quickly
+- Outline functionality that allows you to jump to sections quickly from the sidebar
 - Sort button that will automatically re-organize your sheets alphabetically by section
 - Built-in instruction manual that will tell you how to use the tool
 
