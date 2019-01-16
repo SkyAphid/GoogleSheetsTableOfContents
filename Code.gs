@@ -7,6 +7,19 @@
 *
 */
 
+function onInstall(e) {
+  onOpen(e);
+}
+
+function onOpen(e) {
+  var menu = SpreadsheetApp.getUi().createAddonMenu();
+  menu.addItem('Generate Table of Contents From Active Sheet', 'generateTableOfContents');
+  menu.addItem('Sort Active Sheet Alphabetically By Section', 'sortSheet');
+  menu.addItem('Open Sidebar', 'NOKORIWARETableOfContentsGenerator');
+  menu.addItem('Open Instruction Manual', 'generateTableOfContents');
+  menu.addToUi();
+}
+
 /*
 * This is the core function, use this to begin running the add-on.
 */
