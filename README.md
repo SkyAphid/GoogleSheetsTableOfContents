@@ -39,7 +39,6 @@ A table that's ready to have a Table of Contents generated from it will follow t
 
 The table of contents sections are in the A column. Empty cells are ignored. Non-empty cells are added to the Table of Contents and automatically linked to by the generator.
 
-## Soapbox ##
-I apologize that this is a bit of an inconvienence to install. Normally I'd try and make the process easier and faster, but this was a bit of a doozy. 
+## Chrome Web-Store Page ##
 
-By the time I finished this, I was so tired of Google's awful APIs that I wanted to get as far away from it as possible. I had intended to make it an add on and put it on the Google Chrome Web Store for ease of use/convienence and also post it on here so people could access the code, but it's probably easier for everyone involved if I just post it here. I'm tired of spending hours trying to figure out how to use basic parts of their APIs because they think it's a good idea to try and support as many languages as possible (but fail to support a single one of them well). 
+I've made this tool available on the Chrome web-store. It's currently pending, but I'll post a link here when it's ready!
