@@ -12,7 +12,11 @@ Google Sheets doesn't have a built in Table of Contents generator like Google Do
 - Sort button that will automatically re-organize your sheets alphabetically by section
 - Built-in instruction manual that will tell you how to use the tool
 
-## Installation ##
+## Chrome Web-Store Installation ##
+
+I've made this tool available on the Chrome web-store. It's currently pending, but I'll post a link here when it's ready!
+
+## Manual Installation ##
 - Open Tools dropdown from the Google Sheet Toolbar
 - Select Script Editor
 - Copy Code.gs and Sidebar.html into the Script Editor from this repo
@@ -38,7 +42,3 @@ A table that's ready to have a Table of Contents generated from it will follow t
 ![tableexample](https://user-images.githubusercontent.com/6147299/49590311-330cf100-f931-11e8-817c-e83173ba6a6f.JPG)
 
 The table of contents sections are in the A column. Empty cells are ignored. Non-empty cells are added to the Table of Contents and automatically linked to by the generator.
-
-## Chrome Web-Store Page ##
-
-I've made this tool available on the Chrome web-store. It's currently pending, but I'll post a link here when it's ready!
