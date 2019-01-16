@@ -13,10 +13,10 @@ function onInstall(e) {
 
 function onOpen(e) {
   var menu = SpreadsheetApp.getUi().createAddonMenu();
+  menu.addItem('Open Sidebar', 'NOKORIWARETableOfContentsGenerator');
   menu.addItem('Generate Table of Contents From Active Sheet', 'generateTableOfContents');
   menu.addItem('Sort Active Sheet Alphabetically By Section', 'sortSheet');
-  menu.addItem('Open Sidebar', 'NOKORIWARETableOfContentsGenerator');
-  menu.addItem('Open Instruction Manual', 'generateTableOfContents');
+  menu.addItem('Open Instruction Manual', 'showManual');
   menu.addToUi();
 }
 
@@ -267,7 +267,7 @@ function quickSelect(sourceSheetIndex, sectionIndex) {
 /*
 * Shows a message with instructions on how to use the addon
 */
-function showInstructions() {
+function showManual() {
   showMessage("Table of Contents Generator Manual", 
               "Formatting Your Sheet For The Generator:"
               + "\n• Column A will be used to designate sections of the sheet (i.e. chapter titles and the pages they're on)."
