@@ -5,27 +5,35 @@
 <div style="padding: 5px;">
   <form id="inputForm">
   
+    <!--Select Sheet Dropdown-->
     <div class="block form-group">
-      <label for="sourceSheet"><b>Select Sheet</b></label>
-      <select id="sourceSheet" title="Select the base sheet. Non-empty cells in column A will be used to designate sections." onchange="refreshQuickSelect();"></select>
+      <label for="sourceSheet"><b>Quick Select Sheet</b></label>
+      <select id="sourceSheet" title="The selected sheet's Table of Contents will be used to fill the Quick Select dropdown with sections you can quickly jump between." onchange="refreshQuickSelect();"></select>
     </div>
     
+    <!--Table of Contents Quick Select Dropdown-->
     <div class="block form-group">
       <label for="tocQuickSelect"><b>Table of Contents Quick Select</b></label>
-      <select id="tocQuickSelect" title="If the Table of Contents for this sheet has already been generated, use this drop-down to quickly access its sections." onclick="quickSelect();"></select>
+      <select id="tocQuickSelect" title="If the Table of Contents for the selected sheet has been generated, you can use this dropdown to quickly jump to its various sections." onclick="quickSelect();"></select>
     </div>
     
+    <!--Refresh Button-->
     <div class="block form-group">
-      <button type="submit" class="action" id="generateButton">Generate Table of Contents</button>
+      <button type="submit" class="action" id="generateButton" title="Generate a new Table of Contents sheet from the currently active sheet.">Generate Table of Contents</button>
     </div>
-   
   </form>
   
-  <br>
-  <button class="action" id="refresh" title="Press this to refresh this sidebar if any changes are made to the various sheets or new ones are generated." onclick="google.script.run.NOKORIWARETableOfContentsGenerator()">Refresh</button>
+  <!--Refresh Button-->
+  <br><br>
+  <button class="action" id="refresh" title="Refresh this sidebar and update the sheets in the dropdown menus." onclick="google.script.run.NOKORIWARETableOfContentsGenerator()">Refresh</button>
   
+  <!--Sort Button-->
   <br><br><br><br>
-  <button class="action" id="intructions" onclick="google.script.run.showInstructions()">Instructions/About</button>
+  <button class="action" id="sort" title="Make a copy of the selected sheet and sort it alphabetically by TOC section." onclick="google.script.run.sortSheet()">Sort Sheet</button>
+  
+  <!--Instructions Button-->
+  <br><br>
+  <button class="action" id="intructions" title="Read instructions on how to use this tool." onclick="google.script.run.showInstructions()">Instruction Manual</button>
 </div>
 <!--End HTML-->
 
@@ -40,8 +48,7 @@
 $(document).ready(function() {
 
   //add the available sheets to the Source Sheet dropdown
-  google.script.run
-    .withSuccessHandler(function(sourceSheet) {
+  google.script.run.withSuccessHandler(function(sourceSheet) {
     
       //Fill the source sheet drop-down
       $.each(sourceSheet, function(key, val) {
