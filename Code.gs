@@ -188,7 +188,7 @@ function sortSheet() {
   NOKORIWARETableOfContentsGenerator();
   
   //Show a confirmation message
-  showMessage("Sorting " + sourceSheet.getName(), "Sorting may take a moment to complete. Please wait until the process is completed.");
+  showMessage("Sorting " + sourceSheet.getName(), "Sorting may take a moment to complete.\nA confirmation message will be shown once the new sheet is finished generating.\nPlease wait until the process is completed.");
   
   /*
   * Fetch sections and sort them alphabetically
@@ -227,6 +227,8 @@ function sortSheet() {
     
     currentRow += numSectionRows;
   }
+  
+  showMessage("Sorting Complete", sourceSheet.getName() + " has finished sorting.");
 }
 
 /*
