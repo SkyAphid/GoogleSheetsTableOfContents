@@ -184,6 +184,12 @@ function sortSheet() {
   //Flush the app so that the changes are reflected immediately
   SpreadsheetApp.flush();
   
+  //Refresh the app once we generate the new sheet
+  NOKORIWARETableOfContentsGenerator();
+  
+  //Show a confirmation message
+  showMessage("Sorting " + sourceSheet.getName(), "Sorting may take a moment to complete. Please wait until the process is completed.");
+  
   /*
   * Fetch sections and sort them alphabetically
   */
@@ -221,9 +227,6 @@ function sortSheet() {
     
     currentRow += numSectionRows;
   }
-  
-  //Refresh the app once we generate the new sheet
-  NOKORIWARETableOfContentsGenerator();
 }
 
 /*
