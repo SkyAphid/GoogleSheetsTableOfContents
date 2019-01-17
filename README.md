@@ -21,24 +21,16 @@ I've made this tool available on the Chrome web-store. It's currently pending, b
 - Select Script Editor
 - Copy Code.gs and Sidebar.html into the Script Editor from this repo
 - Close the Script Editor
-- Open Tools dropdown from the Google Sheet Toolbar
-- Hover over "Macros"
-- Select "Import"
-- Find "NOKORIWARETableOfContentsGenerator"
-- Click "ADD FUNCTION" to its lower right
-
-You can rename the function to something prettier like "Table of Contents Generator" by using the Manage Macros button.
 
 ## Using It ##
 After installing:
-- Open Tools dropdown from the Google Sheet toobar
-- Hover Macros
-- Click NOKORIWARETableOfContentsGenerator (or whatever you changed the name to)
-
-This will start the program and a sidebar will appear on the right. From there, you can click the Instructions/About button to see more information on how to use it.
+- Hover over Add-Ons
+- Find 'NOKORI•WARE Table of Contents Generator'
+- Hover over that entry to open the submenu containing all of this plugin's tools available
+- For more in-depth instruction on usage, select the 'Open Instruction Manual' option
 
 A table that's ready to have a Table of Contents generated from it will follow this format:
 
 ![tableexample](https://user-images.githubusercontent.com/6147299/49590311-330cf100-f931-11e8-817c-e83173ba6a6f.JPG)
 
-The table of contents sections are in the A column. Empty cells are ignored. Non-empty cells are added to the Table of Contents and automatically linked to by the generator.
+Data used by table of contents generator are located in the A column, so that column must be reserved for section names. Cell A1 is the name of the Table of Contents. Everything below that cell denotes section names (e.g. equivalent to chapters in books). Empty cells are ignored. Non-empty cells are added to the Table of Contents and automatically linked to by the generator.
