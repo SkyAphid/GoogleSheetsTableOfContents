@@ -4,7 +4,7 @@ This handy script will let you generate Table of Contents sheets for your Google
 ![capture](https://user-images.githubusercontent.com/6147299/51238036-806e7c00-193b-11e9-9b00-f35fb7f5933e.JPG)
 
 ## About ##
-Google Sheets doesn't have a built in Table of Contents generator like Google Docs has, so I built one myself and also added a basic Outline system to it. I originally checked the web store and only found one addon that handled this functionality, but it was unreliable and easy to break. So I decided to take one for the team and put this together in a few hours. My hope is that my sacrifice means that no one else will ever have to bang their heads against the awful Google API like I did to get basic functionality out of their spreadsheets.
+Google Sheets, despite being really great free software, unfortunately doesn't have a built-in table of contents/outline tool like Google Docs has. I originally checked the web store and only found one add-on that handled this functionality, but it was unreliable and easy to break. So I decided to take one for the team and put this together in a few hours. I'm posting the software here because I know there has to be others like me who need it for their various large-scale projects.
 
 ## Features ##
 - Table of Contents Generator: a sheet with links to various defined sections can be automatically created
