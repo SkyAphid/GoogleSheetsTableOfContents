@@ -12,15 +12,12 @@ Google Sheets, despite being really great free software, unfortunately doesn't h
 - Sort button that will automatically re-organize your sheets alphabetically by section
 - Built-in instruction manual that will tell you how to use the tool
 
-## Chrome Web-Store Installation ##
-
-I've made this tool available on the Chrome web-store. It's currently pending, but I'll post a link here when it's ready!
-
 ## Manual Installation ##
 - Open Tools dropdown from the Google Sheet Toolbar
 - Select Script Editor
 - Copy Code.gs and Sidebar.html into the Script Editor from this repo
 - Close the Script Editor
+- Access the tools from the Add-ons dropdown on the toolbar
 
 ## Using It ##
 After installing:
