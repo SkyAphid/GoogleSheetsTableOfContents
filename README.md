@@ -12,15 +12,13 @@ Google Sheets, despite being really great free software, unfortunately doesn't h
 - Sort button that will automatically re-organize your sheets alphabetically by section
 - Built-in instruction manual that will tell you how to use the tool
 
-## Manual Installation ##
+## Installation ##
 - Open Tools dropdown from the Google Sheet Toolbar
 - Select Script Editor
 - Copy Code.gs and Sidebar.html into the Script Editor from this repo
 - Close the Script Editor
-- Access the tools from the Add-ons dropdown on the toolbar
 
-## Using It ##
-After installing:
+## Using It (After Installation) ##
 - Hover over Add-Ons
 - Find 'NOKORI•WARE Table of Contents Generator'
 - Hover over that entry to open the submenu containing all of this plugin's tools available
