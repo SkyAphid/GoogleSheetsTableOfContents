@@ -105,7 +105,11 @@ function generateTableOfContents() {
   var tocSheet = spreadSheet.getSheetByName(tocName);
   
   if (tocSheet == null) {
+    //If the sheet is null, create a new one
     tocSheet = spreadSheet.insertSheet(tocName);
+  } else{
+    //If the sheet exists, clear it to avoid de-syncing issues
+    tocSheet.clear();
   }
   
   //Reactivate the source sheet so that it doesn't jerk you over to the generated table of contents (this gets annoying)
